@@ -16,7 +16,7 @@ function App() {
    return (
       <View style={styles.body} >
          <Text style={styles.text} >{name}</Text>
-         <Button title='Update State' onPress={onPressHandler} ></Button>
+         <Button style={styles.button} title='Update State' onPress={onPressHandler} ></Button>
       </View>
    )
 }
@@ -35,9 +35,15 @@ const styles = StyleSheet.create({
    },
    text: {
       color: 'black',
-      fontSize: 20,
+      fontSize: 40,
       fontStyle: 'italic',
-      margin: 10
+      margin: 10,
+      textTransform: 'uppercase'
+   },
+   button: {
+      width: 150,
+      height: 60,
+      backgroundColor: 'orange'
    }
    
 })
