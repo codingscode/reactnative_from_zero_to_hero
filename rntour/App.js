@@ -6,22 +6,16 @@ import { Button, StyleSheet, Text, View } from 'react-native'
 
 
 function App() {
-   const [name, setName] = useState('Aladin')
-   const [session, setSession] = useState({ number: 6, title: 'state' })
-   const [current, setCurrent] = useState(true)
-
+   const [name, setName] = useState('Style Test')
+   
 
    const onPressHandler = () => {
-      setName('Programando com Mash')
-      setSession({ number:7, title: 'Style' })
-      setCurrent(!current)
+      setName('STyle Test is Done!')
    }
 
    return (
       <View style={styles.body} >
          <Text style={styles.text} >{name}</Text>
-         <Text style={styles.text} >This is session number {session.number} and about {session.title}</Text>
-         <Text style={styles.text} >{current ? 'current session' : 'next session'}</Text>
          <Button title='Update State' onPress={onPressHandler} ></Button>
       </View>
    )
@@ -30,12 +24,16 @@ function App() {
 const styles = StyleSheet.create({
    body: {
       flex: 1,
-      backgroundColor: 'lightgreen',
+      backgroundColor: 'yellow',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      borderWidth: 10,
+      borderColor: 'green',
+      borderRadius: 10,
+      margin: 40
    },
    text: {
-      color: '#ffffff',
+      color: 'black',
       fontSize: 20,
       fontStyle: 'italic',
       margin: 10
