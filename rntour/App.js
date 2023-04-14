@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
       borderWidth: 10,
       borderColor: 'green',
       borderRadius: 10,
-      margin: 40
+      //margin: 40
    },
    text: {
       color: 'black',
