@@ -32,10 +32,10 @@ function App() {
 const styles = StyleSheet.create({
    body: {
       flex: 1,
-      flexDirection: 'row',
+      flexDirection: 'row', // column
       backgroundColor: 'yellow',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'flex-start', //space-between, flex-end, center, space-around
    },
    view1: {
       width: 100,
