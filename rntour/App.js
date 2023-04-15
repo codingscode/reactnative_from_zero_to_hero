@@ -33,12 +33,10 @@ const styles = StyleSheet.create({
    body: {
       width: 400,
       height: 400,
+      flexDirection: 'column-reverse',
       backgroundColor: 'yellow',
       alignItems: 'center',
       justifyContent: 'center',
-      borderWidth: 10,
-      borderColor: 'green',
-      borderRadius: 10,
    },
    view1: {
       width: 100,
