@@ -31,30 +31,26 @@ function App() {
 
 const styles = StyleSheet.create({
    body: {
-      width: 400,
-      height: 400,
-      flexDirection: 'row-reverse',
+      flex: 1,
+      flexDirection: 'column',
       backgroundColor: 'yellow',
       alignItems: 'center',
       justifyContent: 'center',
    },
    view1: {
-      width: 100,
-      height: 100,
+      flex: 1,
       backgroundColor: 'lightblue',
       alignItems: 'center',
       justifyContent: 'center'
    },
    view2: {
-      width: 100,
-      height: 100,
+      flex: 1,
       backgroundColor: 'magenta',
       alignItems: 'center',
       justifyContent: 'center'
    },
    view3: {
-      width: 100,
-      height: 100,
+      flex: 1,
       backgroundColor: 'lightgreen',
       alignItems: 'center',
       justifyContent: 'center'
