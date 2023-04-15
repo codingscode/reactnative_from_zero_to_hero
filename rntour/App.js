@@ -31,7 +31,8 @@ function App() {
 
 const styles = StyleSheet.create({
    body: {
-      flex: 1,
+      width: 400,
+      height: 400,
       backgroundColor: 'yellow',
       alignItems: 'center',
       justifyContent: 'center',
