@@ -25,8 +25,7 @@ function App() {
 
 const styles = StyleSheet.create({
    body: {
-      width: '100%',
-      height: '50%',
+      flex: 1,
       backgroundColor: 'yellow',
       alignItems: 'center',
       justifyContent: 'center',
