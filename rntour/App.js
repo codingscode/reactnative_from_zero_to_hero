@@ -32,25 +32,28 @@ function App() {
 const styles = StyleSheet.create({
    body: {
       flex: 1,
-      flexDirection: 'column', // row
+      flexDirection: 'row',
       backgroundColor: 'yellow',
-      alignItems: 'flex-start', // flex-end, stretch, center
-      justifyContent: 'center', // flex-start
+      alignItems: 'center',
+      justifyContent: 'center',
    },
    view1: {
-      flex: 1,
+      width: 100,
+      height: 100,
       backgroundColor: 'lightblue',
       alignItems: 'center',
       justifyContent: 'center'
    },
    view2: {
-      flex: 1,
+      width: 100,
+      height: 100,
       backgroundColor: 'magenta',
       alignItems: 'center',
       justifyContent: 'center'
    },
    view3: {
-      flex: 1,
+      width: 100,
+      height: 100,
       backgroundColor: 'lightgreen',
       alignItems: 'center',
       justifyContent: 'center'
