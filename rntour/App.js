@@ -22,18 +22,14 @@ function App() {
    
 
    return (
-      <View style={styles.body} >
-         <ScrollView>
-            {Items.map((item, i) => {
-                  return (
-                     <View style={styles.item} key={i} >
-                        <Text style={styles.text} >{item.item}</Text>
-                     </View>
-                  )
-               })}
-         </ScrollView>
-         
-      </View>
+      <ScrollView horizontal={true} style={styles.body} >
+         {Items.map((item, i) => {
+            return (
+               <View style={styles.item} key={i} >
+                  <Text style={styles.text} >{item.item}</Text>
+               </View>
+            )})}
+      </ScrollView>
    )
 }
 
