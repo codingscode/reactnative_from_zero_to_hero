@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native'
 
 
 
@@ -22,7 +22,7 @@ function App() {
    
 
    return (
-      <ScrollView horizontal={true} style={styles.body} >
+      <ScrollView refreshControl={<RefreshControl />} style={styles.body} >
          {Items.map((item, i) => {
             return (
                <View style={styles.item} key={i} >
