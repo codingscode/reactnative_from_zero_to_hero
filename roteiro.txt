@@ -9,7 +9,7 @@ no terminal:
 
 * documentação do react native
 
-
+permite rolar
 
 
 

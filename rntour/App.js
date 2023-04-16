@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View } from 'react-native'
 
 
 
@@ -14,21 +14,24 @@ function App() {
       { key: 5, item: 'Item 5' },
       { key: 6, item: 'Item 6' },
       { key: 7, item: 'Item 7' },
-      { key: 8, item: 'Item 8' }
+      { key: 8, item: 'Item 8' },
+      { key: 9, item: 'Item 9' },
+      { key: 10, item: 'Item 10' },
+      { key: 11, item: 'Item 11' }
    ])
    
 
    return (
       <View style={styles.body} >
-         {
-            Items.map((item, i) => {
-               return (
-                  <View style={styles.item} key={i} >
-                     <Text style={styles.text} >{item.item}</Text>
-                  </View>
-               )
-            })
-         }
+         <ScrollView>
+            {Items.map((item, i) => {
+                  return (
+                     <View style={styles.item} key={i} >
+                        <Text style={styles.text} >{item.item}</Text>
+                     </View>
+                  )
+               })}
+         </ScrollView>
          
       </View>
    )
@@ -45,27 +48,6 @@ const styles = StyleSheet.create({
       backgroundColor: 'orange',
       justifyContent: 'center',
       alignItems: 'center'
-   },
-   view1: {
-      width: 100,
-      height: 100,
-      backgroundColor: 'lightblue',
-      alignItems: 'center',
-      justifyContent: 'center'
-   },
-   view2: {
-      width: 100,
-      height: 100,
-      backgroundColor: 'magenta',
-      alignItems: 'center',
-      justifyContent: 'center'
-   },
-   view3: {
-      width: 100,
-      height: 100,
-      backgroundColor: 'lightgreen',
-      alignItems: 'center',
-      justifyContent: 'center'
    },
    text: {
       color: 'black',
