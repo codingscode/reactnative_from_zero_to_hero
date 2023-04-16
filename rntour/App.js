@@ -20,9 +20,16 @@ function App() {
 
    return (
       <View style={styles.body} >
-         <View style={styles.item} >
-            <Text style={styles.text} >Item 1</Text>
-         </View>
+         {
+            Items.map((item, i) => {
+               return (
+                  <View style={styles.item} key={i} >
+                     <Text style={styles.text} >{item.item}</Text>
+                  </View>
+               )
+            })
+         }
+         
       </View>
    )
 }
@@ -34,6 +41,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'yellow',
    },
    item: {
+      margin: 10,
       backgroundColor: 'orange',
       justifyContent: 'center',
       alignItems: 'center'
