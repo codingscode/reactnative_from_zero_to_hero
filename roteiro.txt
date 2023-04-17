@@ -19,6 +19,18 @@ só gira quando arrasta o dedo para baixo
 
 quando se arrasta com o dedo para baixo dando refresh um último item é acrescentado no final da lista
 
+mudando a cor do spinner
+
+
+
+
+
+
+
+
+
+
+
 
 
 

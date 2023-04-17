@@ -29,7 +29,7 @@ function App() {
    }
 
    return (
-      <ScrollView refreshControl={<RefreshControl refreshing={Refreshing} onRefresh={onRefresh} />} style={styles.body} >
+      <ScrollView refreshControl={<RefreshControl refreshing={Refreshing} onRefresh={onRefresh} colors={['red']} />} style={styles.body} >
          {Items.map((item, i) => {
             return (
                <View style={styles.item} key={i} >
