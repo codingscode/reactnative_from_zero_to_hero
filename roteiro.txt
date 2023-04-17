@@ -21,7 +21,7 @@ quando se arrasta com o dedo para baixo dando refresh um último item é acresce
 
 mudando a cor do spinner
 
-
+ctrl + s
 
 
 

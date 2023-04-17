@@ -30,7 +30,8 @@ function App() {
 
    return (
       <FlatList data={Items}
-         keyExtractor={(item, index) => index.toString()}
+         numColumns={2}
+         //keyExtractor={(item, index) => index.toString()}
          renderItem={({item}, i) => (
             <View style={styles.item} >
                <Text style={styles.text} >{item.name}</Text>
