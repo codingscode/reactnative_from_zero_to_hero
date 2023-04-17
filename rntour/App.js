@@ -22,8 +22,14 @@ function App() {
 
    const [Refreshing, setRefreshing] = useState(false)
 
+   const onRefresh = () => {
+      setRefreshing(true)
+      setItems([...Items, {key: 69, item: 'Item 69'}])
+      setRefreshing(false)
+   }
+
    return (
-      <ScrollView refreshControl={<RefreshControl refreshing={Refreshing} />} style={styles.body} >
+      <ScrollView refreshControl={<RefreshControl refreshing={Refreshing} onRefresh={onRefresh} />} style={styles.body} >
          {Items.map((item, i) => {
             return (
                <View style={styles.item} key={i} >
