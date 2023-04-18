@@ -30,7 +30,7 @@ function App() {
 
    return (
       <FlatList data={Items}
-         horizontal
+         horizontal inverted
          keyExtractor={(item, index) => index.toString()}
          renderItem={({item}, i) => (
             <View style={styles.item} >
