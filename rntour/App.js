@@ -24,19 +24,19 @@ function App() {
 
    const onRefresh = () => {
       setRefreshing(true)
-      setItems([...Items, {key: 69, item: 'Item 69'}])
+      setItems([...Items, { name: 'Item 69'}])
       setRefreshing(false)
    }
 
    return (
       <FlatList data={Items}
-         horizontal inverted
          keyExtractor={(item, index) => index.toString()}
          renderItem={({item}, i) => (
             <View style={styles.item} >
                <Text style={styles.text} >{item.name}</Text>
             </View>
          )}
+         refreshControl={<RefreshControl refreshing={Refreshing} onRefresh={onRefresh} colors={['red']} />}
        />
       /* {/* <ScrollView refreshControl={<RefreshControl refreshing={Refreshing} onRefresh={onRefresh} colors={['red']} />} style={styles.body} >
          {Items.map((item, i) => {

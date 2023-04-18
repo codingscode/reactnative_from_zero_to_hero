@@ -25,6 +25,7 @@ ctrl + s (idem)
 
 fica na horizontal
 
+quando se arrasta com o dedo para baixo dando refresh um último item é acrescentado no final da lista
 
 
 
