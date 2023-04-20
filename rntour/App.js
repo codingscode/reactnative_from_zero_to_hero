@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { Button, StyleSheet, Text, View, TextInput } from 'react-native'
+import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 
 
 
@@ -21,7 +21,12 @@ function App() {
          <TextInput style={styles.input} placeholder='e.g. John' 
             onChangeText={(value) => setName(value)} 
              />
-         <Button title={submitted ? 'Clear' : 'Submit'} onPress={onPressHandler} color={submitted ? 'red' : 'lightgreen'} />
+         {/* <Button title={submitted ? 'Clear' : 'Submit'} onPress={onPressHandler} color={submitted ? 'red' : 'lightgreen'} /> */}
+         <TouchableOpacity style={styles.button} onPress={onPressHandler} >
+            <Text style={styles.text} >
+               {submitted ? 'Clear' : 'Submit'}
+            </Text>
+         </TouchableOpacity>
          {submitted ? 
            <Text style={styles.text} >
              You are registered as {name}
@@ -52,6 +57,12 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontSize: 20,
       marginBottom: 10
+   },
+   button: {
+      width: 150,
+      height: 50,
+      backgroundColor: '#00ff00',
+      alignItems: 'center'
    }
    
    
