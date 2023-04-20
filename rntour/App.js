@@ -13,7 +13,9 @@ function App() {
          <Text style={styles.text} >
             Please write your name:
          </Text>
-         <TextInput style={styles.input} placeholder='e.g. John' onChangeText={(value) => setName(value)} multiline keyboardType='phone-pad' />
+         <TextInput style={styles.input} placeholder='e.g. John' 
+            onChangeText={(value) => setName(value)} 
+            maxLength={3} editable={true} />
          <Text style={styles.text} >
             Your name is: {name}
          </Text>
