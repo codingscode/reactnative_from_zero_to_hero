@@ -21,7 +21,7 @@ function App() {
          <TextInput style={styles.input} placeholder='e.g. John' 
             onChangeText={(value) => setName(value)} 
              />
-         <Button title={submitted ? 'Clear' : 'Submit'} onPress={onPressHandler} disabled={submitted} />
+         <Button title={submitted ? 'Clear' : 'Submit'} onPress={onPressHandler} color={submitted ? 'red' : 'lightgreen'} />
          {submitted ? 
            <Text style={styles.text} >
              You are registered as {name}
