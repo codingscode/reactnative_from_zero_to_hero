@@ -51,11 +51,13 @@ function App() {
       <SectionList sections={DATA}
          keyExtractor={(item, index) => index.toString()}
          renderItem={({ item }) => (
+            <Text style={styles.text} >{item}</Text>
+         )}
+         renderSectionHeader={({section})=> (
             <View style={styles.item} >
-               <Text style={styles.text} >{item}</Text>
+               <Text style={styles.text} >{section.title}</Text>
             </View>
          )}
-      
        />
       /*<FlatList data={Items}
          keyExtractor={(item, index) => index.toString()}
