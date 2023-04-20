@@ -15,7 +15,7 @@ function App() {
          </Text>
          <TextInput style={styles.input} placeholder='e.g. John' 
             onChangeText={(value) => setName(value)} 
-            maxLength={3} editable={true} />
+            secureTextEntry />
          <Text style={styles.text} >
             Your name is: {name}
          </Text>
