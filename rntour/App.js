@@ -1,12 +1,17 @@
 
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, TextInput } from 'react-native'
+import { Button, StyleSheet, Text, View, TextInput } from 'react-native'
 
 
 
 
 function App() {
    const [name, setName] = useState('')
+   const [submitted, setSubmitted] = useState(false)
+
+   const onPressHandler = () => {
+      setSubmitted(!submitted)
+   }
 
    return (
       <View style={styles.body} >
@@ -15,10 +20,14 @@ function App() {
          </Text>
          <TextInput style={styles.input} placeholder='e.g. John' 
             onChangeText={(value) => setName(value)} 
-            secureTextEntry />
-         <Text style={styles.text} >
-            Your name is: {name}
-         </Text>
+             />
+         <Button title='Submit' onPress={onPressHandler} />
+         {submitted ? 
+           <Text style={styles.text} >
+             You are registered as {name}
+           </Text>
+          : null}
+         
       </View>
       
    )
@@ -41,7 +50,8 @@ const styles = StyleSheet.create({
       borderColor: '#555',
       borderRadius: 5,
       textAlign: 'center',
-      fontSize: 20
+      fontSize: 20,
+      marginBottom: 10
    }
    
    
