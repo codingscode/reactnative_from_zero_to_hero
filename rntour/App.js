@@ -13,7 +13,7 @@ function App() {
          <Text style={styles.text} >
             Please write your name:
          </Text>
-         <TextInput style={styles.input} placeholder='e.g. John' onChangeText={(value) => setName(value)} />
+         <TextInput style={styles.input} placeholder='e.g. John' onChangeText={(value) => setName(value)} multiline keyboardType='phone-pad' />
          <Text style={styles.text} >
             Your name is: {name}
          </Text>
