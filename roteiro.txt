@@ -35,6 +35,8 @@ pressionar o botão
 
 muda a cor ao pressionar
 
+a função é disparada segurando por 1 segundo
+
 
 
 

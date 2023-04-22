@@ -25,7 +25,7 @@ function App() {
          <TextInput style={styles.input} placeholder='e.g. John' 
             onChangeText={(value) => setName(value)} 
              />
-         <Pressable onPress={onPressHandler} style={colorchanger} >
+         <Pressable onLongPress={onPressHandler} delayLongPress={1000} style={colorchanger} >
             <Text style={styles.text} >
                {submitted ? 'Clear' : 'Submit'}
             </Text>
