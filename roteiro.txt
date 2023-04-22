@@ -37,7 +37,7 @@ muda a cor ao pressionar
 
 a função é disparada segurando por 1 segundo
 
-
+uma cor ao tocar
 
 
 
