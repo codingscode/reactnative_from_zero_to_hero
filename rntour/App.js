@@ -22,7 +22,7 @@ function App() {
             onChangeText={(value) => setName(value)} 
              />
          {/* <Button title={submitted ? 'Clear' : 'Submit'} onPress={onPressHandler} color={submitted ? 'red' : 'lightgreen'} /> */}
-         <TouchableOpacity style={styles.button} onPress={onPressHandler} >
+         <TouchableOpacity style={styles.button} onPress={onPressHandler} activeOpacity={0.2} >
             <Text style={styles.text} >
                {submitted ? 'Clear' : 'Submit'}
             </Text>
