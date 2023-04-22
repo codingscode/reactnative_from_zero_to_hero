@@ -21,8 +21,7 @@ function App() {
          <TextInput style={styles.input} placeholder='e.g. John' 
             onChangeText={(value) => setName(value)} 
              />
-         {/* <Button title={submitted ? 'Clear' : 'Submit'} onPress={onPressHandler} color={submitted ? 'red' : 'lightgreen'} /> */}
-         <TouchableHighlight style={styles.button} onPress={onPressHandler} activeOpacity={0.4} >
+         <TouchableHighlight style={styles.button} onPress={onPressHandler} activeOpacity={0.4} underlayColor='#dddddd' >
             <Text style={styles.text} >
                {submitted ? 'Clear' : 'Submit'}
             </Text>
@@ -35,8 +34,9 @@ function App() {
          
       </View>
       
-   )
-}
+      )
+      {/* <Button title={submitted ? 'Clear' : 'Submit'} onPress={onPressHandler} color={submitted ? 'red' : 'lightgreen'} /> */}
+   }
 
 const styles = StyleSheet.create({
    body: {
