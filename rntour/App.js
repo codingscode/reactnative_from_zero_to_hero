@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { Button, StyleSheet, Text, View, TextInput, TouchableHighlight } from 'react-native'
+import { Button, StyleSheet, Text, View, TextInput, TouchableWithoutFeedback } from 'react-native'
 
 
 
@@ -21,11 +21,11 @@ function App() {
          <TextInput style={styles.input} placeholder='e.g. John' 
             onChangeText={(value) => setName(value)} 
              />
-         <TouchableHighlight style={styles.button} onPress={onPressHandler} activeOpacity={0.4} underlayColor='#dddddd' >
+         <TouchableWithoutFeedback style={styles.button} onPress={onPressHandler}  >
             <Text style={styles.text} >
                {submitted ? 'Clear' : 'Submit'}
             </Text>
-         </TouchableHighlight>
+         </TouchableWithoutFeedback>
          {submitted ? 
            <Text style={styles.text} >
              You are registered as {name}
