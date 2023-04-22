@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
+import { Button, StyleSheet, Text, View, TextInput, TouchableHighlight } from 'react-native'
 
 
 
@@ -22,11 +22,11 @@ function App() {
             onChangeText={(value) => setName(value)} 
              />
          {/* <Button title={submitted ? 'Clear' : 'Submit'} onPress={onPressHandler} color={submitted ? 'red' : 'lightgreen'} /> */}
-         <TouchableOpacity style={styles.button} onPress={onPressHandler} activeOpacity={0.2} >
+         <TouchableHighlight style={styles.button} onPress={onPressHandler} activeOpacity={0.4} >
             <Text style={styles.text} >
                {submitted ? 'Clear' : 'Submit'}
             </Text>
-         </TouchableOpacity>
+         </TouchableHighlight>
          {submitted ? 
            <Text style={styles.text} >
              You are registered as {name}
