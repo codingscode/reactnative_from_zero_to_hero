@@ -21,10 +21,12 @@ function App() {
          <TextInput style={styles.input} placeholder='e.g. John' 
             onChangeText={(value) => setName(value)} 
              />
-         <TouchableWithoutFeedback style={styles.button} onPress={onPressHandler}  >
-            <Text style={styles.text} >
-               {submitted ? 'Clear' : 'Submit'}
-            </Text>
+         <TouchableWithoutFeedback onPress={onPressHandler}  >
+            <View style={styles.button} >
+               <Text style={styles.text} >
+                  {submitted ? 'Clear' : 'Submit'}
+               </Text>
+            </View>
          </TouchableWithoutFeedback>
          {submitted ? 
            <Text style={styles.text} >
