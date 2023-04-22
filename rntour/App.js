@@ -13,6 +13,10 @@ function App() {
       setSubmitted(!submitted)
    }
 
+   const colorchanger = ({ pressed }) => {
+      return [ { backgroundColor : pressed ? 'orange' : '#00ff00'}, styles.button ]
+   }
+
    return (
       <View style={styles.body} >
          <Text style={styles.text} >
@@ -21,7 +25,7 @@ function App() {
          <TextInput style={styles.input} placeholder='e.g. John' 
             onChangeText={(value) => setName(value)} 
              />
-         <Pressable onPress={onPressHandler} style={styles.button} >
+         <Pressable onPress={onPressHandler} style={colorchanger} >
             <Text style={styles.text} >
                {submitted ? 'Clear' : 'Submit'}
             </Text>
@@ -69,8 +73,8 @@ const styles = StyleSheet.create({
    button: {
       width: 150,
       height: 50,
-      backgroundColor: '#00ff00',
-      alignItems: 'center'
+      alignItems: 'center',
+      
    }
    
    
