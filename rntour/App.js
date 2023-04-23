@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { Button, StyleSheet, Text, View, TextInput, Pressable } from 'react-native'
+import { Button, StyleSheet, Text, View, TextInput, Pressable, Alert } from 'react-native'
 
 
 
@@ -10,7 +10,12 @@ function App() {
    const [submitted, setSubmitted] = useState(false)
 
    const onPressHandler = () => {
-      setSubmitted(!submitted)
+      if (name.length > 3) {
+         setSubmitted(!submitted)
+      }
+      else {
+         Alert.alert('Warning', 'The name must be longer than 3 characters', [ {text: 'Ok', onPress: () => console.warn('OK Pressed!'), style: 'destructive'} ])
+      }
    }
 
    const colorchanger = ({ pressed }) => {
