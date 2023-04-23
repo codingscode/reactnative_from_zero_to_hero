@@ -14,7 +14,11 @@ function App() {
          setSubmitted(!submitted)
       }
       else {
-         Alert.alert('Warning', 'The name must be longer than 3 characters', [ {text: 'Ok', onPress: () => console.warn('OK Pressed!'), style: 'destructive'} ])
+         Alert.alert('Warning', 'The name must be longer than 3 characters', [ 
+            {text: 'Do not show again', onPress: () => console.warn('Do not show Pressed!')},
+            {text: 'Cancel', onPress: () => console.warn('Cancel Pressed!')},
+            {text: 'Ok', onPress: () => console.warn('OK Pressed!'), style: 'destructive'}
+         ])
       }
    }
 
