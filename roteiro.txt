@@ -45,6 +45,21 @@ testar
 
 experimentar pressionar fora da caixinha 'Warning'
 
+aparece uma mensagem de alerta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

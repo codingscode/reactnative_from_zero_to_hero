@@ -18,7 +18,7 @@ function App() {
             {text: 'Do not show again', onPress: () => console.warn('Do not show Pressed!')},
             {text: 'Cancel', onPress: () => console.warn('Cancel Pressed!')},
             {text: 'Ok', onPress: () => console.warn('OK Pressed!'), style: 'destructive'}
-         ], { cancelable: true })
+         ], { cancelable: true, onDismiss: () => console.warn('Alert dismissed') })
       }
    }
 
