@@ -8,13 +8,14 @@ import { Button, StyleSheet, Text, View, TextInput, Pressable, Alert, ToastAndro
 function App() {
    const [name, setName] = useState('')
    const [submitted, setSubmitted] = useState(false)
+   const [showWarning, setShowWarning] = useState(false)
 
    const onPressHandler = () => {
       if (name.length > 3) {
          setSubmitted(!submitted)
       }
       else {
-         
+         setShowWarning(true)
       }
    }
 
@@ -24,7 +25,7 @@ function App() {
 
    return (
       <View style={styles.body} >
-         <Modal visible={false} >
+         <Modal visible={showWarning} onRequestClose={() => setShowWarning(false)} >
             <Text>O nome tem que ser maior que 3 caracteres</Text>
          </Modal>
          <Text style={styles.text} >

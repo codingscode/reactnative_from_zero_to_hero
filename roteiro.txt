@@ -51,7 +51,7 @@ pressionar e aparece mensagem
 
 ??? não sobe
 
-
+onRequestClose={() => setShowWarning(false)} permite voltar a parte anterior
 
 
 
