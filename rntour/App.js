@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { Button, StyleSheet, Text, View, TextInput, Pressable, Alert, ToastAndroid, Modal } from 'react-native'
+import { StyleSheet, Text, View, TextInput, Pressable, Modal } from 'react-native'
 
 
 
@@ -26,7 +26,10 @@ function App() {
    return (
       <View style={styles.body} >
          <Modal visible={showWarning} onRequestClose={() => setShowWarning(false)} >
-            <Text>O nome tem que ser maior que 3 caracteres</Text>
+            <View style={styles.warning_modal} >
+               <Text>O nome tem que ser maior que 3 caracteres</Text>
+
+            </View>
          </Modal>
          <Text style={styles.text} >
             Please write your name:
@@ -84,6 +87,11 @@ const styles = StyleSheet.create({
       height: 50,
       alignItems: 'center',
       
+   },
+   warning_modal: {
+      width: 300,
+      height: 300,
+      backgroundColor: 'lightblue'
    }
    
    
