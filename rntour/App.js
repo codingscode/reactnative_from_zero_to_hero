@@ -34,6 +34,9 @@ function App() {
                   <View style={styles.warning_body} >
                      <Text style={styles.text} >O nome tem que ser maior que 3 caracteres</Text>
                   </View>
+                  <Pressable onPress={() => setShowWarning(false)} style={styles.warning_button} >
+                     <Text style={styles.text} >OK</Text>
+                  </Pressable>
                </View>
 
             </View>
@@ -122,6 +125,11 @@ const styles = StyleSheet.create({
       height: 200,
       justifyContent: 'center',
       alignItems: 'center'
+   },
+   warning_button: {
+      backgroundColor: '#00ffff',
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius: 20
    }
    
    
