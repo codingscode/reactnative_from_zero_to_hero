@@ -14,9 +14,9 @@ function App() {
          setSubmitted(!submitted)
       }
       else {
-         ToastAndroid.showWithGravityAndOffset('O nome tem que ser maior que 3 caracteres', 
+         ToastAndroid.showWithGravity('O nome tem que ser maior que 3 caracteres', 
                ToastAndroid.LONG, 
-               ToastAndroid.TOP, 0, 0)
+               ToastAndroid.CENTER)
          /* Alert.alert('Warning', 'The name must be longer than 3 characters', [ 
             {text: 'Do not show again', onPress: () => console.warn('Do not show Pressed!')},
             {text: 'Cancel', onPress: () => console.warn('Cancel Pressed!')},
