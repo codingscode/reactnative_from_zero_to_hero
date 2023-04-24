@@ -25,7 +25,7 @@ function App() {
 
    return (
       <View style={styles.body} >
-         <Modal visible={showWarning} onRequestClose={() => setShowWarning(false)} >
+         <Modal visible={showWarning} onRequestClose={() => setShowWarning(false)} transparent >
             <View style={styles.centered_view} >
                <View style={styles.warning_modal} >
                   <Text>O nome tem que ser maior que 3 caracteres</Text>
@@ -98,7 +98,8 @@ const styles = StyleSheet.create({
    centered_view: {
       flex: 1,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      backgroundColor: '#00000099'
    }
    
    
