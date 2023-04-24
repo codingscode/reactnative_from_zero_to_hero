@@ -31,7 +31,9 @@ function App() {
                   <View style={styles.warning_title} >
                      <Text style={styles.text} >WARNING!</Text>
                   </View>
-                  <Text>O nome tem que ser maior que 3 caracteres</Text>
+                  <View style={styles.warning_body} >
+                     <Text style={styles.text} >O nome tem que ser maior que 3 caracteres</Text>
+                  </View>
                </View>
 
             </View>
@@ -77,6 +79,7 @@ const styles = StyleSheet.create({
       color: 'black',
       fontSize: 20,
       margin: 10,
+      textAlign: 'center'
    },
    input: {
       width: 200,
@@ -114,6 +117,11 @@ const styles = StyleSheet.create({
       backgroundColor: '#ff0',
       borderTopRightRadius: 20,
       borderTopLeftRadius: 20
+   },
+   warning_body: {
+      height: 200,
+      justifyContent: 'center',
+      alignItems: 'center'
    }
    
    
