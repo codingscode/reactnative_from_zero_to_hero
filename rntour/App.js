@@ -28,6 +28,9 @@ function App() {
          <Modal visible={showWarning} onRequestClose={() => setShowWarning(false)} transparent >
             <View style={styles.centered_view} >
                <View style={styles.warning_modal} >
+                  <View style={styles.warning_title} >
+                     <Text style={styles.text} >WARNING!</Text>
+                  </View>
                   <Text>O nome tem que ser maior que 3 caracteres</Text>
                </View>
 
@@ -93,13 +96,24 @@ const styles = StyleSheet.create({
    warning_modal: {
       width: 300,
       height: 300,
-      backgroundColor: 'lightblue'
+      backgroundColor: 'lightblue',
+      borderWidth: 1,
+      borderColor: '#000',
+      borderRadius: 20
    },
    centered_view: {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: '#00000099'
+   },
+   warning_title: {
+      height: 50,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#ff0',
+      borderTopRightRadius: 20,
+      borderTopLeftRadius: 20
    }
    
    
