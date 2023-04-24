@@ -24,7 +24,7 @@ function App() {
 
    return (
       <View style={styles.body} >
-         <Modal visible={true} >
+         <Modal visible={false} >
             <Text>O nome tem que ser maior que 3 caracteres</Text>
          </Modal>
          <Text style={styles.text} >
