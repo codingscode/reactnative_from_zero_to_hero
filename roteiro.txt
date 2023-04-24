@@ -55,7 +55,7 @@ onRequestClose={() => setShowWarning(false)} permite voltar a parte anterior
 
 testar
 
-testar
+testar slide no lugar de fade
 
 
 

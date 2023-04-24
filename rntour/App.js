@@ -25,7 +25,7 @@ function App() {
 
    return (
       <View style={styles.body} >
-         <Modal visible={showWarning} onRequestClose={() => setShowWarning(false)} transparent >
+         <Modal visible={showWarning} onRequestClose={() => setShowWarning(false)} transparent animationType='fade' >
             <View style={styles.centered_view} >
                <View style={styles.warning_modal} >
                   <View style={styles.warning_title} >
@@ -34,7 +34,7 @@ function App() {
                   <View style={styles.warning_body} >
                      <Text style={styles.text} >O nome tem que ser maior que 3 caracteres</Text>
                   </View>
-                  <Pressable onPress={() => setShowWarning(false)} style={styles.warning_button} >
+                  <Pressable onPress={() => setShowWarning(false)} style={styles.warning_button} android_ripple={{color: 'white'}} >
                      <Text style={styles.text} >OK</Text>
                   </Pressable>
                </View>
