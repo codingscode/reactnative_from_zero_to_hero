@@ -47,7 +47,7 @@ experimentar pressionar fora da caixinha 'Warning'
 
 aparece uma mensagem de alerta
 
-
+pressionar e aparece mensagem
 
 
 
