@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, TextInput, Pressable, Modal, Image } from 'react-native'
+import { StyleSheet, Text, View, TextInput, Pressable, Modal, Image, ImageBackground } from 'react-native'
 
 
 
@@ -24,7 +24,7 @@ function App() {
    }
 
    return (
-      <View style={styles.body} >
+      <ImageBackground style={styles.body} source={{ uri: 'https://cdn.pixabay.com/photo/2013/07/12/13/48/bricks-147309_960_720.png' }} >
          <Modal visible={showWarning} onRequestClose={() => setShowWarning(false)} transparent animationType='fade' >
             <View style={styles.centered_view} >
                <View style={styles.warning_modal} >
@@ -63,17 +63,10 @@ function App() {
           : <Image style={styles.image} source={{ uri: 'https://cdn.pixabay.com/photo/2018/01/04/15/51/404-error-3060993_960_720.png' }} resizeMode='stretch' blurRadius={3} />
           }
          
-      </View>
+      </ImageBackground>
       
       )
-      {/* <TouchableWithoutFeedback onPress={onPressHandler}  >
-         <View style={styles.button} >
-            <Text style={styles.text} >
-               {submitted ? 'Clear' : 'Submit'}
-            </Text>
-         </View>
-      </TouchableWithoutFeedback> */}
-      {/* <Button title={submitted ? 'Clear' : 'Submit'} onPress={onPressHandler} color={submitted ? 'red' : 'lightgreen'} /> */}
+      
    }
 
 const styles = StyleSheet.create({
