@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, TextInput, Pressable, Modal, Image, ImageBackground } from 'react-native'
+import MashButton from './CustomButton'
 
 
 
@@ -20,7 +21,7 @@ function App() {
    }
 
    const colorchanger = ({ pressed }) => {
-      return [ { backgroundColor : pressed ? 'orange' : '#00ff00'}, styles.button ]
+      return [ { backgroundColor : pressed ? 'blue' : '#00ff00'}, styles.button ]
    }
 
    return (
@@ -47,12 +48,13 @@ function App() {
          <TextInput style={styles.input} placeholder='e.g. John' 
             onChangeText={(value) => setName(value)} 
              />
-         <Pressable onPress={onPressHandler} style={colorchanger} hitSlop={{ top: 30, bottom: 30, right: 30, left: 30 }} android_ripple={{ color: '#00f' }} >
+         <MashButton onPressFunction={onPressHandler} style={colorchanger} title={submitted ? 'Clear' : 'Submit'} />
+         {/* <Pressable onPress={onPressHandler} style={colorchanger} hitSlop={{ top: 30, bottom: 30, right: 30, left: 30 }} android_ripple={{ color: '#00f' }} >
             <Text style={styles.text} >
                {submitted ? 'Clear' : 'Submit'}
             </Text>
          
-         </Pressable>
+         </Pressable> */}
          {submitted ? 
            <View>
               <Text style={styles.text} >
@@ -94,7 +96,7 @@ const styles = StyleSheet.create({
       width: 150,
       height: 50,
       alignItems: 'center',
-      
+      backgroundColor: 'purple'
    },
    warning_modal: {
       width: 300,
