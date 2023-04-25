@@ -6,7 +6,7 @@ import { Pressable, Text, StyleSheet } from 'react-native'
 const MashButton = (props) => {
 
    return (
-    <Pressable onPress={props.onPressFunction} style={props.colorchanger} hitSlop={{ top: 30, bottom: 30, right: 30, left: 30 }} android_ripple={{ color: '#00f' }} >
+    <Pressable onPress={props.onPressFunction} style={[props.color, styles.button]} hitSlop={{ top: 30, bottom: 30, right: 30, left: 30 }} android_ripple={{ color: '#00f' }} >
        <Text style={styles.text} >
           {props.title}
        </Text>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         width: 150,
         height: 50,
         alignItems: 'center',
-        backgroundColor: 'white'
+        backgroundColor: 'lightgreen'
     },
     
 
