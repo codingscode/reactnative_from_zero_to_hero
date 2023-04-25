@@ -57,7 +57,7 @@ function App() {
            <Text style={styles.text} >
              You are registered as {name}
            </Text>
-          : <Image style={styles.image} source={require('./assets/error.png')} />
+          : <Image style={styles.image} source={require('./assets/error.png')} resizeMode='stretch' />
           }
          
       </View>
