@@ -59,6 +59,8 @@ testar slide no lugar de fade
 
 testar com 4 caracteres
 
+tem que ligar a internet do dispositivo para aparecer a imagem
+
 
 
 
