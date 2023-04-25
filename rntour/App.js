@@ -54,9 +54,12 @@ function App() {
          
          </Pressable>
          {submitted ? 
-           <Text style={styles.text} >
-             You are registered as {name}
-           </Text>
+           <View>
+              <Text style={styles.text} >
+                You are registered as {name}
+              </Text>
+              <Image style={styles.image} source={require('./assets/done.png')} resizeMode='stretch' />
+           </View>
           : <Image style={styles.image} source={require('./assets/error.png')} resizeMode='stretch' />
           }
          
