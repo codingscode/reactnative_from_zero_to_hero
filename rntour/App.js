@@ -24,7 +24,7 @@ function App() {
    }
 
    return (
-      <ImageBackground style={styles.body} source={{ uri: 'https://cdn.pixabay.com/photo/2013/07/12/13/48/bricks-147309_960_720.png' }} >
+      <ImageBackground style={styles.body} source={{ uri: 'https://cdn.pixabay.com/photo/2013/07/12/12/35/texture-145968_960_720.png' }} >
          <Modal visible={showWarning} onRequestClose={() => setShowWarning(false)} transparent animationType='fade' >
             <View style={styles.centered_view} >
                <View style={styles.warning_modal} >
