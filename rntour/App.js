@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, TextInput, Pressable, Modal } from 'react-native'
+import { StyleSheet, Text, View, TextInput, Pressable, Modal, Image } from 'react-native'
 
 
 
@@ -57,7 +57,8 @@ function App() {
            <Text style={styles.text} >
              You are registered as {name}
            </Text>
-          : null}
+          : <Image style={styles.image} source={require('./assets/error.png')} />
+          }
          
       </View>
       
@@ -130,6 +131,11 @@ const styles = StyleSheet.create({
       backgroundColor: '#00ffff',
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20
+   },
+   image: {
+      width: 100,
+      height: 100,
+      margin: 10
    }
    
    
