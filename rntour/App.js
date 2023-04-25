@@ -60,7 +60,7 @@ function App() {
               </Text>
               <Image style={styles.image} source={require('./assets/done.png')} resizeMode='stretch' />
            </View>
-          : <Image style={styles.image} source={{ uri: 'https://cdn.pixabay.com/photo/2018/01/04/15/51/404-error-3060993_960_720.png' }} resizeMode='stretch' />
+          : <Image style={styles.image} source={{ uri: 'https://cdn.pixabay.com/photo/2018/01/04/15/51/404-error-3060993_960_720.png' }} resizeMode='stretch' blurRadius={3} />
           }
          
       </View>
