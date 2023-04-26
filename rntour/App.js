@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, TextInput, Pressable, Modal, Image, ImageBackground } from 'react-native'
 import MashButton from './CustomButton'
+import Header from './Header'
 
 
 
@@ -24,6 +25,7 @@ function App() {
 
    return (
       <ImageBackground style={styles.body} source={{ uri: 'https://cdn.pixabay.com/photo/2013/07/12/12/35/texture-145968_960_720.png' }} >
+         <Header />
          <Modal visible={showWarning} onRequestClose={() => setShowWarning(false)} transparent animationType='fade' >
             <View style={styles.centered_view} >
                <View style={styles.warning_modal} >
@@ -47,7 +49,7 @@ function App() {
             onChangeText={(value) => setName(value)} 
              />
          <MashButton onPressFunction={onPressHandler} color={'magenta'} title={submitted ? 'Clear' : 'Submit'} />
-         <MashButton onPressFunction={onPressHandler} color={'red'} title={'Test'} style={{margin: 10}} />
+         <MashButton onPressFunction={() => { }} color={'red'} title={'Test'} style={{margin: 10}} />
          {/* <Pressable onPress={onPressHandler} style={colorchanger} hitSlop={{ top: 30, bottom: 30, right: 30, left: 30 }} android_ripple={{ color: '#00f' }} >
             <Text style={styles.text} >
                {submitted ? 'Clear' : 'Submit'}
