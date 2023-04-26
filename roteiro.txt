@@ -68,13 +68,17 @@ https://reactnavigation.org/
 no terminal:
    npm i @react-navigation/native
    npm i @react-navigation/stack
+   npm i react-native-gesture-handler
+   npm install react-native-screens react-native-safe-area-context
+   react-native link react-native-screens
+   
 
 
 https://reactnavigation.org/docs/stack-navigator
 
 
-
-
+https://www.appsloveworld.com/react-native/100/1/invariant-violation-requirenativecomponent-rnsscreen-was-not-found-in-the-uim
+https://www.youtube.com/watch?v=t6R2vDjVfqo
 
 
 
