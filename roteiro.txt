@@ -63,10 +63,14 @@ tem que ligar a internet do dispositivo para aparecer a imagem
 
 no terminal digitar r   idem
 
+https://reactnavigation.org/
+
+no terminal:
+   npm i @react-navigation/native
+   npm i @react-navigation/stack
 
 
-
-
+https://reactnavigation.org/docs/stack-navigator
 
 
 
