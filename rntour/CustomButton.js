@@ -8,7 +8,7 @@ const MashButton = (props) => {
 
 
    const colorchanger = ({ pressed }) => {
-      return [ { backgroundColor : pressed ? 'blue' : props.color}, styles.button ]
+      return [ { backgroundColor : pressed ? 'blue' : props.color}, styles.button, {...props.style} ]
    }
 
    return (

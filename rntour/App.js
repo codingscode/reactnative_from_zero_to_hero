@@ -47,7 +47,7 @@ function App() {
             onChangeText={(value) => setName(value)} 
              />
          <MashButton onPressFunction={onPressHandler} color={'magenta'} title={submitted ? 'Clear' : 'Submit'} />
-         <MashButton onPressFunction={onPressHandler} color={'red'} title={'Test'} />
+         <MashButton onPressFunction={onPressHandler} color={'red'} title={'Test'} style={{margin: 10}} />
          {/* <Pressable onPress={onPressHandler} style={colorchanger} hitSlop={{ top: 30, bottom: 30, right: 30, left: 30 }} android_ripple={{ color: '#00f' }} >
             <Text style={styles.text} >
                {submitted ? 'Clear' : 'Submit'}
