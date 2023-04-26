@@ -18,6 +18,7 @@ const Header = (props) => {
 
 const styles = StyleSheet.create({
    view: {
+      width: '100%',
       height: 50,
       backgroundColor: '#00f',
       justifyContent: 'center',
@@ -25,6 +26,7 @@ const styles = StyleSheet.create({
    },
    text: {
       fontSize: 25,
+      fontWeight: 'bold',
       color: '#ffffff'
    }
 
