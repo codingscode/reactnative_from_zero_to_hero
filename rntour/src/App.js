@@ -37,7 +37,8 @@ function App() {
    const ScreenB = ({navigation}) => {
       
       const onPressHandler = () => {
-         navigation.navigate('Screen_A')
+         //navigation.navigate('Screen_A')
+         navigation.goBack()
       }
 
       return (
