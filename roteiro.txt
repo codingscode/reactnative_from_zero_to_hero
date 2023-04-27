@@ -97,15 +97,21 @@ no terminal:
 
 aparece uma aba no final da tela, clicar nos dois botoes
 
+https://github.com/oblador/react-native-vector-icons
+
+no terminal:
+   npm install --save react-native-vector-icons
+
+
+entrar na pasta android e no terminal:
+   ./gradlew clean
+
+
+https://fontawesome.com/v4/icons/
 
 
 
-
-
-
-
-
-
+os icones agora aparecem
 
 
 
