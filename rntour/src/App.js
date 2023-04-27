@@ -59,11 +59,11 @@ function App() {
 
    return (
       <NavigationContainer>
-         <Stack.Navigator>
-            <Stack.Screen name="Screen_A" component={ScreenA} options={{header: () => null}} />
+         <Stack.Navigator screenOptions={{header: () => null}} >
+            <Stack.Screen name="Screen_A" component={ScreenA} /* options={{header: () => null}} */ />
             <Stack.Screen name="Screen_B" component={ScreenB} />
          </Stack.Navigator>
-      </NavigationContainer>      
+      </NavigationContainer>
    )
       
 }

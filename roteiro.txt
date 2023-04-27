@@ -85,9 +85,9 @@ não muda muita coisa
 
 a setinha de voltar em cima desaparece, e clicando para voltar mostra erro
 
-tirando o cabeçario da tela A
+tirando o cabeçalho da tela A
 
-
+retira o cabeçalho geral
 
 
 
