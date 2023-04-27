@@ -16,7 +16,7 @@ function App() {
    const ScreenA = ({navigation}) => {
    
       const onPressHandler = () => {
-         navigation.replace('Screen_B')
+         navigation.navigate('Screen_B')
       }
       
       return (
@@ -60,7 +60,7 @@ function App() {
    return (
       <NavigationContainer>
          <Stack.Navigator>
-            <Stack.Screen name="Screen_A" component={ScreenA} />
+            <Stack.Screen name="Screen_A" component={ScreenA} options={{header: () => null}} />
             <Stack.Screen name="Screen_B" component={ScreenB} />
          </Stack.Navigator>
       </NavigationContainer>      
