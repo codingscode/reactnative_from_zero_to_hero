@@ -16,7 +16,7 @@ function App() {
    const ScreenA = () => {
       return (
          <View style={styles.body} >
-            <Text  >
+            <Text style={styles.text} >
                Screen A
             </Text>
          </View>
