@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 
 import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { enableScreens } from 'react-native-screens'
 import ScreenA from './ScreenA'
 import ScreenB from './ScreenB'
@@ -10,7 +10,7 @@ import ScreenB from './ScreenB'
 
 //enableScreens()
 
-const Stack = createStackNavigator() // correção
+const Tab = createBottomTabNavigator()
 
 
 function App() {
@@ -19,10 +19,10 @@ function App() {
    
    return (
          <NavigationContainer>
-         <Stack.Navigator  >
-            <Stack.Screen name="Screen_A" component={ScreenA}  />
-            <Stack.Screen name="Screen_B" component={ScreenB} />
-         </Stack.Navigator>
+         <Tab.Navigator  >
+            <Tab.Screen name="Screen_A" component={ScreenA}  />
+            <Tab.Screen name="Screen_B" component={ScreenB} />
+         </Tab.Navigator>
       </NavigationContainer>
    )
    

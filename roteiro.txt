@@ -95,6 +95,7 @@ no terminal:
    npm install @react-navigation/bottom-tabs
 
 
+aparece uma aba no final da tela, clicar nos dois botoes
 
 
 
