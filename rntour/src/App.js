@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { StyleSheet, Text, View  } from 'react-native'
+import { Pressable, StyleSheet, Text, View  } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { enableScreens } from 'react-native-screens'
@@ -13,12 +13,23 @@ function App() {
    
    const Stack = createStackNavigator()
 
-   const ScreenA = () => {
+   const ScreenA = ({navigation}) => {
+   
+      const onPressHandler = () => {
+         navigation.navigate('Screen_B')
+      }
+   
       return (
          <View style={styles.body} >
             <Text style={styles.text} >
                Screen A
             </Text>
+            <Pressable onPress={onPressHandler} style={({ pressed }) => ({ backgroundColor: pressed ? 'violet' : '#0f0' }) } >
+               <Text style={styles.text} >
+                  Go to Screen B
+               </Text>
+
+            </Pressable>
          </View>
       )
    }
