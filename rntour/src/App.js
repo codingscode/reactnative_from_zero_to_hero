@@ -18,7 +18,7 @@ function App() {
       const onPressHandler = () => {
          navigation.navigate('Screen_B')
       }
-   
+      
       return (
          <View style={styles.body} >
             <Text style={styles.text} >
@@ -34,12 +34,23 @@ function App() {
       )
    }
    
-   const ScreenB = () => {
+   const ScreenB = ({navigation}) => {
+      
+      const onPressHandler = () => {
+         navigation.navigate('Screen_A')
+      }
+
       return (
          <View style={styles.body} >
             <Text style={styles.text} >
                Screen B
             </Text>
+            <Pressable onPress={onPressHandler} style={({ pressed }) => ({ backgroundColor: pressed ? 'yellow' : '#0f0' }) } >
+               <Text style={styles.text} >
+                  Go back to Screen A
+               </Text>
+
+            </Pressable>
          </View>
       )
    }
@@ -54,7 +65,7 @@ function App() {
       </NavigationContainer>      
    )
       
-   }
+}
 
 const styles = StyleSheet.create({
    body: {
@@ -65,7 +76,8 @@ const styles = StyleSheet.create({
    text: {
       fontSize: 40,
       fontWeight: 'bold',
-      margin: 10
+      margin: 10,
+      color: 'black'
    }
    
 })
