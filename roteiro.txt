@@ -89,9 +89,10 @@ tirando o cabeçalho da tela A
 
 retira o cabeçalho geral
 
+https://reactnavigation.org/docs/tab-based-navigation
 
-
-
+no terminal:
+   npm install @react-navigation/bottom-tabs
 
 
 

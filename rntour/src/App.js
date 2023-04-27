@@ -10,11 +10,11 @@ import ScreenB from './ScreenB'
 
 //enableScreens()
 
+const Stack = createStackNavigator() // correção
 
 
 function App() {
    
-   const Stack = createStackNavigator()
    
    
    return (
