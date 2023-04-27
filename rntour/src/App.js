@@ -5,7 +5,9 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { enableScreens } from 'react-native-screens'
 
-enableScreens()
+//enableScreens()
+
+
 
 function App() {
    
@@ -13,8 +15,8 @@ function App() {
 
    const ScreenA = () => {
       return (
-         <View>
-            <Text>
+         <View style={styles.body} >
+            <Text  >
                Screen A
             </Text>
          </View>
@@ -32,6 +34,16 @@ function App() {
    }
 
 const styles = StyleSheet.create({
+   body: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+   },
+   text: {
+      fontSize: 40,
+      fontWeight: 'bold',
+      margin: 10
+   }
    
 })
 
