@@ -22,11 +22,23 @@ function App() {
          </View>
       )
    }
+   
+   const ScreenB = () => {
+      return (
+         <View style={styles.body} >
+            <Text style={styles.text} >
+               Screen B
+            </Text>
+         </View>
+      )
+   }
+
 
    return (
       <NavigationContainer>
          <Stack.Navigator>
             <Stack.Screen name="Screen_A" component={ScreenA} />
+            <Stack.Screen name="Screen_B" component={ScreenB} />
          </Stack.Navigator>
       </NavigationContainer>      
    )
