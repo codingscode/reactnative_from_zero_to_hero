@@ -40,10 +40,11 @@ function App() {
       }
    }
    
+   const tint = { activeTintColor: '#f0f', inactiveTintColor: '#33ffcc' }
    
    return (
       <NavigationContainer>
-         <Tab.Navigator screenOptions={handler} tabBarOptions={{ activeTintColor: '#f0f' }} >
+         <Tab.Navigator screenOptions={handler} tabBarOptions={tint} >
             <Tab.Screen name="Screen_A" component={ScreenA}  />
             <Tab.Screen name="Screen_B" component={ScreenB} />
          </Tab.Navigator>
