@@ -2,18 +2,18 @@
 import React, { useState } from 'react'
 
 import { NavigationContainer } from '@react-navigation/native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { enableScreens } from 'react-native-screens'
+//import { enableScreens } from 'react-native-screens'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 
 import ScreenA from './ScreenA'
 import ScreenB from './ScreenB'
-
-
 //enableScreens()
 
-const Tab = createBottomTabNavigator()
 
+
+//const Tab = createBottomTabNavigator()
+const Tab = createMaterialBottomTabNavigator()
 
 
 function App() {

@@ -124,10 +124,14 @@ faz desaparece os nomes screen_a e screen_b embaixo dos icones
 aquele simbolozinho de notificação
 
 
+https://reactnavigation.org/docs/material-bottom-tab-navigator
+
+no terminal:
+   npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
 
 
 
-
+as cores ficam diferentes
 
 
 
