@@ -40,11 +40,12 @@ function App() {
       }
    }
    
-   const tint = { activeTintColor: '#f0f', inactiveTintColor: '#33ffcc', activeBackgroundColor: '#ffff66', inactiveBackgroundColor: '#808000', showLabel: false }
+   const tint = { activeTintColor: '#f0f', inactiveTintColor: '#33ffcc', activeBackgroundColor: '#ffff66', inactiveBackgroundColor: '#808000', showLabel: true, labelStyle: { fontSize: 14 } }
    
+
    return (
       <NavigationContainer>
-         <Tab.Navigator screenOptions={handler} tabBarOptions={tint} >
+         <Tab.Navigator screenOptions={handler} tabBarOptions={tint}  >
             <Tab.Screen name="Screen_A" component={ScreenA}  />
             <Tab.Screen name="Screen_B" component={ScreenB} />
          </Tab.Navigator>
