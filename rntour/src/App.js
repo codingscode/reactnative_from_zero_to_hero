@@ -46,7 +46,7 @@ function App() {
    return (
       <NavigationContainer>
          <Tab.Navigator screenOptions={handler} tabBarOptions={tint}  >
-            <Tab.Screen name="Screen_A" component={ScreenA}  />
+            <Tab.Screen name="Screen_A" component={ScreenA} options={{ tabBarBadge: 3 }} />
             <Tab.Screen name="Screen_B" component={ScreenB} />
          </Tab.Navigator>
       </NavigationContainer>

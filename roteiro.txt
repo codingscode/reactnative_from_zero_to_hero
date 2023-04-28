@@ -121,6 +121,8 @@ outro jeito com cores
 
 faz desaparece os nomes screen_a e screen_b embaixo dos icones
 
+aquele simbolozinho de notificação
+
 
 
 
