@@ -40,7 +40,7 @@ function App() {
       }
    }
    
-   const tint = { activeTintColor: '#f0f', inactiveTintColor: '#33ffcc' }
+   const tint = { activeTintColor: '#f0f', inactiveTintColor: '#33ffcc', activeBackgroundColor: '#ffff66', inactiveBackgroundColor: '#808000' }
    
    return (
       <NavigationContainer>
