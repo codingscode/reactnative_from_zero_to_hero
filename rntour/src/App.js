@@ -25,13 +25,15 @@ function App() {
             if (route.name === 'Screen_A') {
                iconName = 'autoprefixer'
                size = focused ? 25 : 20
+               color = focused ? '#ff8080' : '#00e6e6'
             }
             else if (route.name === 'Screen_B') {
                iconName = 'btc'
                size = focused ? 25 : 20
+               color = focused ? '#00e6ac' : '#cc00cc'
             }
             return (
-               <FontAwesome5 name={iconName} size={size} />
+               <FontAwesome5 name={iconName} size={size} color={color} />
             )
          }
       }
