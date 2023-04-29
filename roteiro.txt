@@ -145,7 +145,7 @@ funcionando
 
 é possível deslizar com o dedo para ver a transição de uma tela para outra na horizontal
 
-
+já aparece sem isso
 
 
 

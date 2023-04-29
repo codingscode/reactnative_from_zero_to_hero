@@ -42,7 +42,7 @@ function App() {
       }
    }
    
-   const tint = { activeTintColor: '#f0f', inactiveTintColor: '#33ffcc', activeBackgroundColor: '#ffff66', inactiveBackgroundColor: '#808000', showLabel: true, labelStyle: { fontSize: 14 } }
+   const tint = { activeTintColor: '#f0f', inactiveTintColor: '#33ffcc', activeBackgroundColor: '#ffff66', inactiveBackgroundColor: '#808000', showLabel: true, labelStyle: { fontSize: 14 }, showIcon: true }
    
 
    return (
