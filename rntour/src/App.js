@@ -21,8 +21,8 @@ function App() {
    return (
       <NavigationContainer>
          <Drawer.Navigator initialRouteName='Screen_A' drawerPosition="right" drawerType="permanent" edgeWidth={500} hideStatusBar={true} overlayColor='red' drawerStyle={{ backgroundColor: 'pink', width: 250 }} >
-            <Drawer.Screen name="Screen_A" component={ScreenA} />
-            <Drawer.Screen name="Screen_B" component={ScreenB} />
+            <Drawer.Screen name="Screen_A" component={ScreenA} options={{ title: 'Screen_A Title' }} />
+            <Drawer.Screen name="Screen_B" component={ScreenB} options={{ title: 'Screen_B Title' }} />
          </Drawer.Navigator>
       </NavigationContainer>
    )

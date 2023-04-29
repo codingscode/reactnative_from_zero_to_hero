@@ -165,7 +165,9 @@ começa pela tela B
 
 testar cada atributo da tag por vez
 
-[não está surtindo efeito tentar corrigir] **
+este funcionou
+
+[não está surtindo efeito tentar corrigir] ***
 
 
 
