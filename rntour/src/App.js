@@ -20,7 +20,7 @@ function App() {
 
    return (
       <NavigationContainer>
-         <Drawer.Navigator initialRouteName='Screen_B' >
+         <Drawer.Navigator initialRouteName='Screen_A' drawerPosition="right" drawerType="permanent" >
             <Drawer.Screen name="Screen_A" component={ScreenA} />
             <Drawer.Screen name="Screen_B" component={ScreenB} />
          </Drawer.Navigator>
