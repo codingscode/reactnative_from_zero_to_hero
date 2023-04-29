@@ -148,6 +148,101 @@ funcionando
 já aparece sem isso
 
 
+https://reactnavigation.org/docs/drawer-navigator
+
+
+no terminal:
+   npm install @react-navigation/drawer
+   npm install react-native-gesture-handler react-native-reanimated
+   npm start -- --reset-cache
+
+
+https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/installation/#babel-plugin
+
+pressionar arrastando da esquerda para a direita para ver uma aba lateral
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
