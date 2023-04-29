@@ -161,7 +161,7 @@ https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/installatio
 
 pressionar arrastando da esquerda para a direita para ver uma aba lateral
 
-
+começa pela tela B
 
 
 
