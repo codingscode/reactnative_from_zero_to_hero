@@ -6,7 +6,7 @@ import { Pressable, StyleSheet, Text, View  } from 'react-native'
 
 
 
-const ScreenA = ({navigation}) => {
+const ScreenA = ({navigation, route}) => {
    
     const onPressHandler = () => {
        navigation.navigate('Screen_B')
@@ -25,6 +25,7 @@ const ScreenA = ({navigation}) => {
              </Text>
 
           </Pressable>
+          <Text style={styles.text} >{route.params?.Message}</Text>
        </View>
     )
 }
