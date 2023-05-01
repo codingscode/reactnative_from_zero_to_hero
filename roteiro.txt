@@ -173,6 +173,8 @@ pressionar arrastando da esquerda para a direita para ver que a aba lateral é d
 
 centraliza o titulo
 
+mudança de cores
+
 [não está surtindo efeito tentar corrigir] ******
 
 
