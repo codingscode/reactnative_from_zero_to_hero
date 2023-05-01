@@ -5,7 +5,9 @@ import { Pressable, StyleSheet, Text, View  } from 'react-native'
 
 
 
-const ScreenB = ({navigation}) => {
+const ScreenB = ({navigation, route}) => {
+    
+    const { ItemName, ItemId } = route.params
       
     const onPressHandler = () => {
        //navigation.navigate('Screen_A')
@@ -23,6 +25,8 @@ const ScreenB = ({navigation}) => {
              </Text>
 
           </Pressable>
+          <Text style={styles.text} >{ItemName}</Text>
+          <Text style={styles.text} >ID: {ItemId}</Text>
        </View>
     )
 }
