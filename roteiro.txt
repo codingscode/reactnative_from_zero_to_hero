@@ -171,6 +171,7 @@ este funcionou
 
 pressionar arrastando da esquerda para a direita para ver que a aba lateral é desabilitada
 
+centraliza o titulo
 
 [não está surtindo efeito tentar corrigir] ******
 
