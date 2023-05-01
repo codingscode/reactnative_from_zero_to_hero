@@ -9,7 +9,7 @@ import { Pressable, StyleSheet, Text, View  } from 'react-native'
 const ScreenA = ({navigation}) => {
    
     const onPressHandler = () => {
-       navigation.navigate('Screen_B', {ItemName: 'Item from Screen A', ItemId: 12})
+       //navigation.navigate('Screen_B', {ItemName: 'Item from Screen A', ItemId: 12})
        //navigation.openDrawer()
        
     }

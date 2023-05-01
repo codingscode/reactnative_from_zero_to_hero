@@ -38,7 +38,7 @@ function App() {
              screenOptions={{ headerShown: true, swipeEnabled: false, gestureEnabled: false, 
                  headerTitleAlign: 'center', headerStyle: { backgroundColor: 'orange' }, headerTintColor: '#ffffff', headerTitleStyle: {fontSize: 25, fontWeight: 'bold'} }}  >
             <Drawer.Screen name="Screen_A" component={ScreenA} options={{ title: 'Screen_A Title', drawerIcon: iconda }} />
-            <Drawer.Screen name="Screen_B" component={ScreenB} options={{ title: 'Screen_B Title', drawerIcon: icondb }} />
+            <Drawer.Screen name="Screen_B" component={ScreenB} options={{ title: 'Screen_B Title', drawerIcon: icondb }} initialParams={{ItemName: 'Item from Drawer', ItemId: 12}} />
          </Drawer.Navigator>
       </NavigationContainer>
    )

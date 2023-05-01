@@ -11,8 +11,8 @@ const ScreenB = ({navigation, route}) => {
       
     const onPressHandler = () => {
        //navigation.navigate('Screen_A')
-       //navigation.goBack()
-       navigation.setParams({ ItemId: 14 })
+       navigation.goBack()
+       //navigation.setParams({ ItemId: 14 })
     }
 
     return (
