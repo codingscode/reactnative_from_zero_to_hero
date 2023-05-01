@@ -169,7 +169,10 @@ este funcionou
 
 este funcionou
 
-[não está surtindo efeito tentar corrigir] ****
+pressionar arrastando da esquerda para a direita para ver que a aba lateral é desabilitada
+
+
+[não está surtindo efeito tentar corrigir] *****
 
 
 

@@ -22,7 +22,7 @@ const icondb = ({focused}) => {
 
 const iconda = ({focused}) => {
    return (
-      <FontAwesome5 name='btc' size={focused ? 25 : 20} color={focused ? 'yellow' : 'violet'} />
+      <FontAwesome5 name='autoprefixer' size={focused ? 25 : 20} color={focused ? 'yellow' : 'violet'} />
    )
 }
 
@@ -32,7 +32,7 @@ function App() {
 
    return (
       <NavigationContainer>
-         <Drawer.Navigator initialRouteName='Screen_A' drawerPosition="right" drawerType="permanent" edgeWidth={500} hideStatusBar={true} overlayColor='red' drawerStyle={{ backgroundColor: 'pink', width: 250 }} >
+         <Drawer.Navigator initialRouteName='Screen_A' drawerPosition="right" drawerType="permanent" edgeWidth={500} hideStatusBar={true} overlayColor='red' drawerStyle={{ backgroundColor: 'pink', width: 250 }} screenOptions={{ headerShown: true, swipeEnabled: false }} >
             <Drawer.Screen name="Screen_A" component={ScreenA} options={{ title: 'Screen_A Title', drawerIcon: iconda }} />
             <Drawer.Screen name="Screen_B" component={ScreenB} options={{ title: 'Screen_B Title', drawerIcon: icondb }} />
          </Drawer.Navigator>
