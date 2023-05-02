@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
        //fontWeight: 'bold',
        margin: 10,
        color: 'black',
-       fontFamily: 'DancingScript-Bold'
+       
     }
     
 })

@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Pressable, StyleSheet, Text, View  } from 'react-native'
-
+import GlobalStyle from '../utils/GlobalStyle'
 
 
 const ScreenA = ({navigation, route}) => {
@@ -15,7 +15,7 @@ const ScreenA = ({navigation, route}) => {
     
     return (
        <View style={styles.body} >
-          <Text style={styles.text} >
+          <Text style={[ GlobalStyle.CustomFont, styles.text]} >
              Screen A
           </Text>
           <Pressable onPress={onPressHandler} style={({ pressed }) => ({ backgroundColor: pressed ? 'violet' : '#0f0' }) } >
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
        //fontWeight: 'bold', // tirando isso funciona
        margin: 10,
        color: 'black',
-       fontFamily: 'DancingScript-Regular'
+       
     }
     
 })

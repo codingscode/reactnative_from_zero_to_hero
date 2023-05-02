@@ -209,7 +209,7 @@ https://github.com/facebook/react-native/issues/34095
 
 transferindo
 
-
+observar mudanças
 
 
 
