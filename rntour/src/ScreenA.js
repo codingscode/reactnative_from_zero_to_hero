@@ -4,9 +4,8 @@ import { Pressable, StyleSheet, Text, View  } from 'react-native'
 
 
 
-
-
 const ScreenA = ({navigation, route}) => {
+    
    
     const onPressHandler = () => {
        navigation.navigate('Screen_B')
@@ -38,9 +37,10 @@ const styles = StyleSheet.create({
     },
     text: {
        fontSize: 40,
-       fontWeight: 'bold',
+       //fontWeight: 'bold', // tirando isso funciona
        margin: 10,
-       color: 'black'
+       color: 'black',
+       fontFamily: 'DancingScript-Regular'
     }
     
 })

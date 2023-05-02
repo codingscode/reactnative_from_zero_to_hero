@@ -189,14 +189,23 @@ testar pressionando
 pressionando ir da tela a para tela b e voltar e ver mensagem
 r no terminal (reload) para fazer a mensagem sumir
 
+react ntive tools -> pulo
+
+-------------------------------------------
+
+https://fonts.google.com/
+   https://fonts.google.com/specimen/Dancing+Script?query=danc
 
 
+no terminal da pasta:
+   npx react-native link // não funciona
+   npx react-native-asset // não funciona
+   npm install -g react-native-cli
 
 
+eu fiz tambem manualmente
 
-
-
-
+https://github.com/facebook/react-native/issues/34095
 
 
 
