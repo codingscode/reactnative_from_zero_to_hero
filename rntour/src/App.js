@@ -6,8 +6,8 @@ import { enableScreens } from 'react-native-screens'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
-import ScreenA from './ScreenA'
-import ScreenB from './ScreenB'
+import ScreenA from './screens/ScreenA'
+import ScreenB from './screens/ScreenB'
 enableScreens()
 
 
@@ -47,4 +47,3 @@ function App() {
 
 
 export default App
-
