@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Pressable, StyleSheet, Text, View  } from 'react-native'
-
+import GlobalStyle from '../utils/GlobalStyle'
 
 
 
@@ -17,7 +17,7 @@ const ScreenB = ({navigation, route}) => {
 
     return (
        <View style={styles.body} >
-          <Text style={styles.text} >
+          <Text style={[GlobalStyle.CustomFont, styles.text]} >
              Screen B
           </Text>
           <Pressable onPress={onPressHandler} style={({ pressed }) => ({ backgroundColor: pressed ? 'yellow' : '#0f0' }) } >
