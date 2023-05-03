@@ -19,7 +19,7 @@ const ScreenA = ({navigation, route}) => {
              Screen A
           </Text>
           <Pressable onPress={onPressHandler} style={({ pressed }) => ({ backgroundColor: pressed ? 'violet' : '#0f0' }) } >
-             <Text style={styles.text} >
+             <Text style={GlobalStyle.ButtonText} >
                 Go to Screen B
              </Text>
 

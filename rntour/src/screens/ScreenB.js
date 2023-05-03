@@ -21,7 +21,7 @@ const ScreenB = ({navigation, route}) => {
              Screen B
           </Text>
           <Pressable onPress={onPressHandler} style={({ pressed }) => ({ backgroundColor: pressed ? 'yellow' : '#0f0' }) } >
-             <Text style={styles.text} >
+             <Text style={GlobalStyle.ButtonText} >
                 Go back to Screen A
              </Text>
 
