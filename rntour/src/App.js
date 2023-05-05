@@ -3,16 +3,16 @@ import React from 'react'
 
 import { NavigationContainer } from '@react-navigation/native'
 import { enableScreens } from 'react-native-screens'
-import { createDrawerNavigator } from '@react-navigation/drawer'
+import { createStackNavigator } from '@react-navigation/stack'
+import Login from './screens/Login'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import Home from './screens/Home'
 
-import ScreenA from './screens/ScreenA'
-import ScreenB from './screens/ScreenB'
 enableScreens()
 
+const Stack = createStackNavigator()
 
 
-const Drawer = createDrawerNavigator()
 
 const icondb = ({focused}) => {
    return (
@@ -26,20 +26,17 @@ const iconda = ({focused}) => {
    )
 }
 
+
 function App() {
 
    
 
    return (
       <NavigationContainer>
-         <Drawer.Navigator initialRouteName='Screen_A' drawerPosition="right" drawerType="permanent" 
-             edgeWidth={500} hideStatusBar={true} overlayColor='red' 
-             drawerStyle={{ backgroundColor: 'pink', width: 250 }} 
-             screenOptions={{ headerShown: true, swipeEnabled: false, gestureEnabled: false, 
-                 headerTitleAlign: 'center', headerStyle: { backgroundColor: 'orange' }, headerTintColor: '#ffffff', headerTitleStyle: {fontSize: 25, fontWeight: 'bold'} }}  >
-            <Drawer.Screen name="Screen_A" component={ScreenA} options={{ title: 'Screen_A Title', drawerIcon: iconda }} />
-            <Drawer.Screen name="Screen_B" component={ScreenB} options={{ title: 'Screen_B Title', drawerIcon: icondb }} initialParams={{ItemName: 'Item from Drawer', ItemId: 12}} />
-         </Drawer.Navigator>
+         <Stack.Navigator initialRouteName='Login' screenOptions={{ headerTitleAlign: 'center', headerStyle: { backgroundColor: 'orange' }, headerTintColor: '#ffffff', headerTitleStyle: {fontSize: 25, fontWeight: 'bold'} }}  >
+            <Stack.Screen name="Login" component={Login} options={{headerShown: false}} />
+            <Stack.Screen name="Home" component={Home} />
+         </Stack.Navigator>
       </NavigationContainer>
    )
    
