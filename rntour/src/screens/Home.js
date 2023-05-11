@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { Pressable, StyleSheet, Text, View  } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import GlobalStyle from '../utils/GlobalStyle'
 
 
@@ -36,7 +36,6 @@ const Home = ({navigation, route}) => {
           <Text style={[ GlobalStyle.CustomFont, styles.text]} >
              Welcome {name} !
           </Text>
-
 
        </View>
     )
