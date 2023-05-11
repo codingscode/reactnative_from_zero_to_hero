@@ -1,16 +1,27 @@
 
-import React from 'react'
-import { View, StyleSheet, Text, Image, TextInput } from 'react-native'
-
+import React, { useState } from 'react'
+import { View, StyleSheet, Text, Image, TextInput, Alert } from 'react-native'
+import CustomButton from '../utils/CustomButton'
 
 
 const Login = () => {
+   const [name, setName] = useState('')
+
+   const setData = () => {
+      if(name.length == 0) {
+         Alert.alert('Warning!', 'Por favor escreva seu nome.')
+      }
+      else {
+      
+      }
+   }
 
    return (
       <View style={styles.body} >
          <Image style={styles.logo} source={require('../../assets/asyncstorage.png')} />
          <Text style={styles.text} >Async Storage</Text>
-         <TextInput style={styles.input} />
+         <TextInput style={styles.input} placeholder='Digite seu nome' onChangeText={(valor) => setName(valor)} />
+         <CustomButton title='Login' color='#1eb900' onPressFunction={setData} />
       </View>
    )
 }
