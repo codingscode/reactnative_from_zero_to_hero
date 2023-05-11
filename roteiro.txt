@@ -214,9 +214,13 @@ observar mudanças
 ver mudanças
 
 
+https://react-native-async-storage.github.io/async-storage/docs/install
+   npm install @react-native-async-storage/async-storage
 
+entrar na pasta android e no terminal:
+   ./gradlew clean
 
-
+fazendo login, memoriza o nome digitado na mudança de página
 
 
 

@@ -1,30 +1,43 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Pressable, StyleSheet, Text, View  } from 'react-native'
 import GlobalStyle from '../utils/GlobalStyle'
 
 
 const Home = ({navigation, route}) => {
-    
+    const [name, setName] = useState('')
    
     const onPressHandler = () => {
        navigation.navigate('Screen_B')
        //navigation.openDrawer()
-       
+    }
+    
+    useEffect(() => {
+       getData()
+    }, [])
+
+    const getData = () => {
+       try {
+          AsyncStorage.getItem('UserName')
+             .then(value => {
+                if (value != null) {
+                   setName(value)
+                }
+             })
+       }
+       catch(error) {
+          console.log(error)
+       }
     }
     
     return (
        <View style={styles.body} >
           <Text style={[ GlobalStyle.CustomFont, styles.text]} >
-             Screen A
+             Welcome {name} !
           </Text>
-          <Pressable onPress={onPressHandler} style={({ pressed }) => ({ backgroundColor: pressed ? 'violet' : '#0f0' }) } >
-             <Text style={GlobalStyle.ButtonText} >
-                Go to Screen B
-             </Text>
 
-          </Pressable>
-          <Text style={styles.text} >{route.params?.Message}</Text>
+
        </View>
     )
 }
@@ -46,9 +59,3 @@ const styles = StyleSheet.create({
 })
 
 export default Home
-
-
-
-
-
-

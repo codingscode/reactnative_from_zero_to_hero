@@ -2,17 +2,25 @@
 import React, { useState } from 'react'
 import { View, StyleSheet, Text, Image, TextInput, Alert } from 'react-native'
 import CustomButton from '../utils/CustomButton'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 
-const Login = () => {
+
+const Login = ({ navigation }) => {
    const [name, setName] = useState('')
 
-   const setData = () => {
+   const setData = async () => {
       if(name.length == 0) {
          Alert.alert('Warning!', 'Por favor escreva seu nome.')
       }
       else {
-      
+         try {
+            await AsyncStorage.setItem('UserName', name)
+            navigation.navigate('Home')
+         }
+         catch(error) {
+            console.log(error)
+         }
       }
    }
 
