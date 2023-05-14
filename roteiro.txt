@@ -222,7 +222,7 @@ entrar na pasta android e no terminal:
 
 fazendo login, memoriza o nome digitado na mudança de página
 
-
+ir na tela Home digitar na entrada algo e ver mudança
 
 
 
