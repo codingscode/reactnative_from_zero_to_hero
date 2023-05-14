@@ -22,7 +22,7 @@ const MashButton = (props) => {
 
 const styles = StyleSheet.create({
     text: {
-        color: 'black',
+        color: 'yellow',
         fontSize: 20,
         margin: 10,
         textAlign: 'center'

@@ -224,7 +224,7 @@ fazendo login, memoriza o nome digitado na mudança de página
 
 ir na tela Home digitar na entrada algo e ver mudança
 
-
+testar pressionar em 'Update' com o campo de preenchimento vazio e ver o alerta
 
 
 

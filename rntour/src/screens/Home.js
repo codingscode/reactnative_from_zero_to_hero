@@ -1,8 +1,9 @@
 
 import React, { useEffect, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { StyleSheet, Text, TextInput, View } from 'react-native'
+import { Alert, StyleSheet, Text, TextInput, View } from 'react-native'
 import GlobalStyle from '../utils/GlobalStyle'
+import CustomButton from '../utils/CustomButton'
 
 
 const Home = ({navigation, route}) => {
@@ -52,6 +53,7 @@ const Home = ({navigation, route}) => {
              Welcome {name} !
           </Text>
           <TextInput style={styles.input} placeholder='Digite seu nome' value={name} onChangeText={(value) => setName(value)} />
+          <CustomButton title='Update' color='purple' onPressFunction={updateData} />
        </View>
     )
 }
