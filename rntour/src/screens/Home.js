@@ -8,6 +8,7 @@ import CustomButton from '../utils/CustomButton'
 
 const Home = ({navigation, route}) => {
     const [name, setName] = useState('')
+    const [age, setAge] = useState('')
    
     const onPressHandler = () => {
        navigation.navigate('Screen_B')
@@ -20,10 +21,12 @@ const Home = ({navigation, route}) => {
 
     const getData = () => {
        try {
-          AsyncStorage.getItem('UserName')
+          AsyncStorage.getItem('UserData')
              .then(value => {
                 if (value != null) {
-                   setName(value)
+                   let user = JSON.parse(value)
+                   setName(user.Name)
+                   setAge(user.Age)
                 }
              })
        }
@@ -62,6 +65,9 @@ const Home = ({navigation, route}) => {
        <View style={styles.body} >
           <Text style={[ GlobalStyle.CustomFont, styles.text]} >
              Welcome {name} !
+          </Text>
+          <Text style={[ GlobalStyle.CustomFont, styles.text]} >
+             Sua idade é {age}
           </Text>
           <TextInput style={styles.input} placeholder='Digite seu nome' value={name} onChangeText={(value) => setName(value)} />
           <CustomButton title='Update' color='purple' onPressFunction={updateData} />

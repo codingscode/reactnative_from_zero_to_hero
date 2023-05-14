@@ -8,6 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const Login = ({ navigation }) => {
    const [name, setName] = useState('')
+   const [age, setAge] = useState('')
 
    useEffect(() => {
        getData()
@@ -15,7 +16,7 @@ const Login = ({ navigation }) => {
 
    const getData = () => {
       try {
-         AsyncStorage.getItem('UserName')
+         AsyncStorage.getItem('UserData')
             .then(value => {
                if (value != null) {
                   navigation.navigate('Home')
@@ -25,15 +26,16 @@ const Login = ({ navigation }) => {
       catch(error) {
          console.log(error)
       }
-    }
+   }
     
    const setData = async () => {
-      if(name.length == 0) {
-         Alert.alert('Warning!', 'Por favor escreva seu nome.')
+      if(name.length == 0 || age.length == 0) {
+         Alert.alert('Warning!', 'Por favor preencha seus dados.')
       }
       else {
          try {
-            await AsyncStorage.setItem('UserName', name)
+            var user = { Name: name, Age: age }
+            await AsyncStorage.setItem('UserData', JSON.stringify(user))
             navigation.navigate('Home')
          }
          catch(error) {
@@ -47,6 +49,7 @@ const Login = ({ navigation }) => {
          <Image style={styles.logo} source={require('../../assets/asyncstorage.png')} />
          <Text style={styles.text} >Async Storage</Text>
          <TextInput style={styles.input} placeholder='Digite seu nome' onChangeText={(valor) => setName(valor)} />
+         <TextInput style={styles.input} placeholder='Digite sua idade' onChangeText={(valor) => setAge(valor)} />
          <CustomButton title='Login' color='#1eb900' onPressFunction={setData} />
       </View>
    )
@@ -65,7 +68,8 @@ const styles = StyleSheet.create({
    },
    text: {
       fontSize: 30,
-      color: '#ffffff'
+      color: '#ffffff',
+      marginBottom: 130
    },
    input: {
       width: 300,
@@ -75,7 +79,6 @@ const styles = StyleSheet.create({
       backgroundColor: '#ffffff',
       textAlign: 'center',
       fontSize: 20,
-      marginTop: 130,
       marginBottom: 10
    }
    

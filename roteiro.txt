@@ -236,7 +236,7 @@ dando reload, nenhum dado é armazenado
 
 dessa forma o dado fica na tela inicial, só sumindo quando dá reload na aplicação
 
-
+testar entrar com nome e idade
 
 
 
