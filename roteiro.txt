@@ -224,14 +224,15 @@ fazendo login, memoriza o nome digitado na mudança de página
 
 ir na tela Home digitar na entrada algo e ver mudança
 
-testar pressionar em 'Update' com o campo de preenchimento vazio e ver o alerta
+commit anterior
+   testar pressionar em 'Update' com o campo de preenchimento vazio e ver o alerta
+      preenchido também
+   
+   testar reload, e os dados permanecem
 
 
-
-
-
-
-
+pressionando 'Remove' na tela Home, é direcioando para a tela inicial
+dando reload, nenhum dado é armazenado
 
 
 

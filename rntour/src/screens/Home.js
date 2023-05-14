@@ -45,7 +45,18 @@ const Home = ({navigation, route}) => {
             console.log(error)
          }
       }
-   }
+    }
+   
+    const removeData = async () => {
+      try {
+            await AsyncStorage.removeItem('UserName')
+            navigation.navigate('Login')
+      }
+      catch(error) {
+            console.log(error)
+      
+      }
+    }
     
     return (
        <View style={styles.body} >
@@ -54,6 +65,7 @@ const Home = ({navigation, route}) => {
           </Text>
           <TextInput style={styles.input} placeholder='Digite seu nome' value={name} onChangeText={(value) => setName(value)} />
           <CustomButton title='Update' color='purple' onPressFunction={updateData} />
+          <CustomButton title='Remove' color='#f40100' onPressFunction={removeData} />
        </View>
     )
 }
