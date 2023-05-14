@@ -234,6 +234,7 @@ commit anterior
 pressionando 'Remove' na tela Home, é direcioando para a tela inicial
 dando reload, nenhum dado é armazenado
 
+dessa forma o dado fica na tela inicial, só sumindo quando dá reload na aplicação
 
 
 
