@@ -238,7 +238,7 @@ dessa forma o dado fica na tela inicial, só sumindo quando dá reload na aplica
 
 testar entrar com nome e idade
 
-
+fazer login e depois atualizar nome alterando e pressionando update
 
 
 

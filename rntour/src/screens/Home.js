@@ -41,7 +41,8 @@ const Home = ({navigation, route}) => {
       }
       else {
          try {
-            await AsyncStorage.setItem('UserName', name)
+            var user = { Name: name }
+            await AsyncStorage.mergeItem('UserData', JSON.stringify(user))
             Alert.alert('Successo!', 'Seus dados foram atualizados!')
          }
          catch(error) {
