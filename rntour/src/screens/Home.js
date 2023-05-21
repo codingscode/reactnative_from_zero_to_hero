@@ -4,6 +4,16 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native'
 import GlobalStyle from '../utils/GlobalStyle'
 import CustomButton from '../utils/CustomButton'
+import SQLite from 'react-native-sqlite-storage'
+
+
+
+
+const db = SQLite.openDatabase(
+   { name: 'MainDB', location: 'default' },
+   () => { },
+   error => { console.log(error) }
+)
 
 
 const Home = ({navigation, route}) => {
@@ -21,14 +31,29 @@ const Home = ({navigation, route}) => {
 
     const getData = () => {
        try {
-          AsyncStorage.getItem('UserData')
+          /*AsyncStorage.getItem('UserData')
              .then(value => {
                 if (value != null) {
                    let user = JSON.parse(value)
                    setName(user.Name)
                    setAge(user.Age)
                 }
-             })
+             })*/
+          db.transaction((tx) => {
+             tx.executeSql(
+                "SELECT Name, Age FROM Users",
+                [],
+                (tx, results) => {
+                   var len = results.rows.length
+                   if (len > 0){
+                      var userName = results.rows.item(0).Name
+                      var userAge = results.rows.item(0).Age
+                      setName(userName)
+                      setAge(userAge)
+                   }
+                }
+             )
+          })
        }
        catch(error) {
           console.log(error)

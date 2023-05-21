@@ -240,11 +240,15 @@ testar entrar com nome e idade
 
 fazer login e depois atualizar nome alterando e pressionando update
 
+https://sqlite.org/index.html
+https://sqlitetutorial.net
+https://github.com/andpor/react-native-sqlite-storage
 
 
+no terminal da pasta:
+   npm install --save react-native-sqlite-storage
 
-
-
+fazer o login
 
 
 
