@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { View, StyleSheet, Text, Image, TextInput, Alert } from 'react-native'
 import CustomButton from '../utils/CustomButton'
-import AsyncStorage from '@react-native-async-storage/async-storage'
+//import AsyncStorage from '@react-native-async-storage/async-storage'
 import SQLite from 'react-native-sqlite-storage'
 
 

@@ -252,6 +252,8 @@ fazer o login
 
 depois do login, pressionar em 'update' ver funcionando
 
+na verdade não tá nem atualizando nem removendo
+tentar consertar
 
 
 

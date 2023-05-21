@@ -86,8 +86,18 @@ const Home = ({navigation, route}) => {
    
     const removeData = async () => {
       try {
-            await AsyncStorage.clear()
-            navigation.navigate('Login')
+         //await AsyncStorage.clear()
+         db.transaction((tx) => {
+            tx.executeSql(
+               "DELETE FROM Users",
+               [],
+               () => {
+                  navigation.navigate('Login')
+               },
+               error => { console.log(error) }
+            )
+         })
+            
       }
       catch(error) {
             console.log(error)
