@@ -66,9 +66,17 @@ const Home = ({navigation, route}) => {
       }
       else {
          try {
-            var user = { Name: name }
-            await AsyncStorage.mergeItem('UserData', JSON.stringify(user))
-            Alert.alert('Successo!', 'Seus dados foram atualizados!')
+            //var user = { Name: name }
+            //await AsyncStorage.mergeItem('UserData', JSON.stringify(user))
+            db.transaction((tx) => {
+               tx.executeSql(
+                  'UPDATE Users SET Name=?',
+                  [name],
+                  ()=>{ Alert.alert('Successo!', 'Seus dados foram atualizados!') },
+                  error=>{ console.log(error) }
+               )
+            })
+            
          }
          catch(error) {
             console.log(error)

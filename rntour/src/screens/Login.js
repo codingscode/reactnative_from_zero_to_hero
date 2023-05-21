@@ -57,7 +57,7 @@ const Login = ({ navigation }) => {
          console.log(error)
       }
    }
-    
+   
    const setData = async () => {
       if(name.length == 0 || age.length == 0) {
          Alert.alert('Warning!', 'Por favor preencha seus dados.')
