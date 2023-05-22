@@ -263,7 +263,7 @@ no terminal:
 
 ainda há o mesmo problema do sqlite
 
-
+ir na tela Home e pressionar Aumentar
 
 
 

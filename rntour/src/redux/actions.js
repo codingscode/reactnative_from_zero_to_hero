@@ -1,6 +1,7 @@
 
 export const SET_USER_NAME = 'SET_USER_NAME'
 export const SET_USER_AGE = 'SET_USER_AGE'
+export const INCREASE_AGE = 'INCREASE_AGE'
 
 
 export const setName = name => dispatch => {
@@ -18,6 +19,12 @@ export const setAge = age => dispatch => {
    })
 }
 
+export const increaseAge = age => dispatch => {
+   dispatch({
+      type: INCREASE_AGE,
+      payload: age
+   })
+}
 
 
 

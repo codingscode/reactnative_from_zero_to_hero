@@ -6,7 +6,7 @@ import GlobalStyle from '../utils/GlobalStyle'
 import CustomButton from '../utils/CustomButton'
 import SQLite from 'react-native-sqlite-storage'
 import { useSelector, useDispatch } from 'react-redux'
-import { setName, setAge } from '../redux/actions'
+import { setName, setAge, increaseAge } from '../redux/actions'
 
 
 
@@ -121,6 +121,7 @@ const Home = ({navigation, route}) => {
           <TextInput style={styles.input} placeholder='Digite seu nome' value={name} onChangeText={(value) => dispatch(setName(value))} />
           <CustomButton title='Update' color='purple' onPressFunction={updateData} />
           <CustomButton title='Remove' color='#f40100' onPressFunction={removeData} />
+          <CustomButton title='Aumentar' color='#0080ff' onPressFunction={()=>{dispatch(increaseAge())}} />
        </View>
     )
 }
