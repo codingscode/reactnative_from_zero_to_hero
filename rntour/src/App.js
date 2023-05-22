@@ -7,6 +7,10 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Login from './screens/Login'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import Home from './screens/Home'
+import { Provider } from 'react-redux'
+import { Store } from './redux/store'
+
+
 
 enableScreens()
 
@@ -32,12 +36,15 @@ function App() {
    
 
    return (
-      <NavigationContainer>
-         <Stack.Navigator initialRouteName='Login' screenOptions={{ headerTitleAlign: 'center', headerStyle: { backgroundColor: 'orange' }, headerTintColor: '#ffffff', headerTitleStyle: {fontSize: 25, fontWeight: 'bold'} }}  >
-            <Stack.Screen name="Login" component={Login} options={{headerShown: false}} />
-            <Stack.Screen name="Home" component={Home} />
-         </Stack.Navigator>
-      </NavigationContainer>
+      <Provider store={Store} >
+         <NavigationContainer>
+            <Stack.Navigator initialRouteName='Login' screenOptions={{ headerTitleAlign: 'center', headerStyle: { backgroundColor: 'orange' }, headerTintColor: '#ffffff', headerTitleStyle: {fontSize: 25, fontWeight: 'bold'} }}  >
+               <Stack.Screen name="Login" component={Login} options={{headerShown: false}} />
+               <Stack.Screen name="Home" component={Home} />
+            </Stack.Navigator>
+         </NavigationContainer>
+      </Provider>
+
    )
    
 }

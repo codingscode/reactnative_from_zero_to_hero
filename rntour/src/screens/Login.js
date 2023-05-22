@@ -4,8 +4,8 @@ import { View, StyleSheet, Text, Image, TextInput, Alert } from 'react-native'
 import CustomButton from '../utils/CustomButton'
 //import AsyncStorage from '@react-native-async-storage/async-storage'
 import SQLite from 'react-native-sqlite-storage'
-
-
+import { useSelector, useDispatch } from 'react-redux'
+import { setName, setAge } from '../redux/actions'
 
 
 const db = SQLite.openDatabase(
@@ -16,8 +16,10 @@ const db = SQLite.openDatabase(
 
 
 const Login = ({ navigation }) => {
-   const [name, setName] = useState('')
-   const [age, setAge] = useState('')
+   const { name, age } = useSelector(state => state.userReducer)
+   const dispatch = useDispatch()
+   //const [name, setName] = useState('')
+   //const [age, setAge] = useState('')
 
    useEffect(() => {
        createTable()
@@ -64,6 +66,8 @@ const Login = ({ navigation }) => {
       }
       else {
          try {
+            dispatch(setName(name))
+            dispatch(setAge(age))
             //var user = { Name: name, Age: age }
             //await AsyncStorage.setItem('UserData', JSON.stringify(user))
             await db.transaction(async (tx) => {
@@ -85,10 +89,10 @@ const Login = ({ navigation }) => {
 
    return (
       <View style={styles.body} >
-         <Image style={styles.logo} source={require('../../assets/sqlite.png')} />
-         <Text style={styles.text} >Async Storage</Text>
-         <TextInput style={styles.input} placeholder='Digite seu nome' onChangeText={(valor) => setName(valor)} />
-         <TextInput style={styles.input} placeholder='Digite sua idade' onChangeText={(valor) => setAge(valor)} />
+         <Image style={styles.logo} source={require('../../assets/redux.png')} />
+         <Text style={styles.text} >Redux</Text>
+         <TextInput style={styles.input} placeholder='Digite seu nome' onChangeText={(value) => dispatch(setName(value))} />
+         <TextInput style={styles.input} placeholder='Digite sua idade' onChangeText={(value) => dispatch(setAge(value))} />
          <CustomButton title='Login' color='#1eb900' onPressFunction={setData} />
       </View>
    )
@@ -101,14 +105,14 @@ const styles = StyleSheet.create({
       backgroundColor: '#0080ff'
    },
    logo: {
-      width: 100,
-      height: 100,
+      width: 150,
+      height: 150,
       margin: 20
    },
    text: {
       fontSize: 30,
       color: '#ffffff',
-      marginBottom: 130
+      marginBottom: 100
    },
    input: {
       width: 300,

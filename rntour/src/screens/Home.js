@@ -5,6 +5,8 @@ import { Alert, StyleSheet, Text, TextInput, View } from 'react-native'
 import GlobalStyle from '../utils/GlobalStyle'
 import CustomButton from '../utils/CustomButton'
 import SQLite from 'react-native-sqlite-storage'
+import { useSelector, useDispatch } from 'react-redux'
+import { setName, setAge } from '../redux/actions'
 
 
 
@@ -17,8 +19,11 @@ const db = SQLite.openDatabase(
 
 
 const Home = ({navigation, route}) => {
-    const [name, setName] = useState('')
-    const [age, setAge] = useState('')
+    const { name, age } = useSelector(state => state.userReducer)
+    const dispatch = useDispatch()
+    
+    //const [name, setName] = useState('')
+    //const [age, setAge] = useState('')
    
     const onPressHandler = () => {
        navigation.navigate('Screen_B')
@@ -48,8 +53,8 @@ const Home = ({navigation, route}) => {
                    if (len > 0){
                       var userName = results.rows.item(0).Name
                       var userAge = results.rows.item(0).Age
-                      setName(userName)
-                      setAge(userAge)
+                      dispatch(setName(userName))
+                      dispatch(setAge(userAge))
                    }
                 }
              )
@@ -113,7 +118,7 @@ const Home = ({navigation, route}) => {
           <Text style={[ GlobalStyle.CustomFont, styles.text]} >
              Sua idade é {age}
           </Text>
-          <TextInput style={styles.input} placeholder='Digite seu nome' value={name} onChangeText={(value) => setName(value)} />
+          <TextInput style={styles.input} placeholder='Digite seu nome' value={name} onChangeText={(value) => dispatch(setName(value))} />
           <CustomButton title='Update' color='purple' onPressFunction={updateData} />
           <CustomButton title='Remove' color='#f40100' onPressFunction={removeData} />
        </View>

@@ -255,9 +255,13 @@ depois do login, pressionar em 'update' ver funcionando
 na verdade não tá nem atualizando nem removendo
 tentar consertar
 
+no terminal:
+   npm i redux
+   npm i react-redux
+   npm i redux-thunk
 
 
-
+ainda há o mesmo problema do sqlite
 
 
 
