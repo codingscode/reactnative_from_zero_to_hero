@@ -265,15 +265,24 @@ ainda há o mesmo problema do sqlite
 
 ir na tela Home e pressionar Aumentar
 
+https://mocki.io/fake-json-api
+   colar:
+   [
+      {"country": "united states", "city": "new york"},
+      {"country": "brasil", "city": "brasilia"},
+      {"country": "israel", "city": "telaviv"},
+      {"country": "japao", "city": "tokyo"},
+      {"country": "uruguai", "city": "montivideu"}
+   ]
+   gera:
+   https://mocki.io/v1/50ec0dd1-12da-4c6f-8569-21493bdde0ea
 
 
+https://reactnative.dev/docs/network
 
+ligar wifi do smartphone
 
-
-
-
-
-
+entrar na tela home e ver a lista de lugares
 
 
 

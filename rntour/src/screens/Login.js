@@ -89,7 +89,7 @@ const Login = ({ navigation }) => {
 
    return (
       <View style={styles.body} >
-         <Image style={styles.logo} source={require('../../assets/redux.png')} />
+         {/* <Image style={styles.logo} source={require('../../assets/redux.png')} /> */}
          <Text style={styles.text} >Redux</Text>
          <TextInput style={styles.input} placeholder='Digite seu nome' onChangeText={(value) => dispatch(setName(value))} />
          <TextInput style={styles.input} placeholder='Digite sua idade' onChangeText={(value) => dispatch(setAge(value))} />

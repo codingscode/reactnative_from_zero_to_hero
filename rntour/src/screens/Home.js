@@ -1,12 +1,12 @@
 
 import React, { useEffect, useState } from 'react'
-import AsyncStorage from '@react-native-async-storage/async-storage'
-import { Alert, StyleSheet, Text, TextInput, View } from 'react-native'
+//import AsyncStorage from '@react-native-async-storage/async-storage'
+import { Alert, FlatList, StyleSheet, Text, View } from 'react-native'
 import GlobalStyle from '../utils/GlobalStyle'
-import CustomButton from '../utils/CustomButton'
+//import CustomButton from '../utils/CustomButton'
 import SQLite from 'react-native-sqlite-storage'
 import { useSelector, useDispatch } from 'react-redux'
-import { setName, setAge, increaseAge } from '../redux/actions'
+import { setName, setAge, increaseAge, getCities } from '../redux/actions'
 
 
 
@@ -19,20 +19,24 @@ const db = SQLite.openDatabase(
 
 
 const Home = ({navigation, route}) => {
-    const { name, age } = useSelector(state => state.userReducer)
+    const { name, age, cities } = useSelector(state => state.userReducer)
     const dispatch = useDispatch()
     
     //const [name, setName] = useState('')
     //const [age, setAge] = useState('')
+   
+    useEffect(() => {
+       getData()
+       dispatch(getCities())
+    }, [])
+   
    
     const onPressHandler = () => {
        navigation.navigate('Screen_B')
        //navigation.openDrawer()
     }
     
-    useEffect(() => {
-       getData()
-    }, [])
+    
 
     const getData = () => {
        try {
@@ -115,13 +119,21 @@ const Home = ({navigation, route}) => {
           <Text style={[ GlobalStyle.CustomFont, styles.text]} >
              Welcome {name} !
           </Text>
-          <Text style={[ GlobalStyle.CustomFont, styles.text]} >
+          <FlatList 
+             data={cities} renderItem={({item}) => (
+                <View>
+                   <Text>{item.country}</Text>
+                   <Text>{item.city}</Text>
+                </View>
+             )}
+           />
+          {/* <Text style={[ GlobalStyle.CustomFont, styles.text]} >
              Sua idade é {age}
           </Text>
           <TextInput style={styles.input} placeholder='Digite seu nome' value={name} onChangeText={(value) => dispatch(setName(value))} />
           <CustomButton title='Update' color='purple' onPressFunction={updateData} />
           <CustomButton title='Remove' color='#f40100' onPressFunction={removeData} />
-          <CustomButton title='Aumentar' color='#0080ff' onPressFunction={()=>{dispatch(increaseAge())}} />
+          <CustomButton title='Aumentar' color='#0080ff' onPressFunction={()=>{dispatch(increaseAge())}} /> */}
        </View>
     )
 }
